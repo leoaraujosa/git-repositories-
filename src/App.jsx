@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 import Repositories from "./components/Repositories";
+import Header from "./components/Header";
+import FindRepositories from "./components/FindRepositories";
 
 import "./App.css";
-import Header from "./components/Header";
 
 export default function App() {
   const [repositories, setRepositores] = useState([]);
@@ -56,6 +57,7 @@ export default function App() {
           <Header 
             user={user} 
           />
+          <FindRepositories />
           <Repositories
             repositories={repositories}
             handleFavorite={handleFavorite}

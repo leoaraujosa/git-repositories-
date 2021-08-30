@@ -1,0 +1,23 @@
+.find-repositories {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  height: 40px;
+  gap: 5px;
+}
+
+.find-repositories-input {
+  border: 1px solid rgba(0,0,0,0.15);
+  padding: 0 5px;
+  font-size: 14px;
+  color: inherit;
+  border-radius: 0.4rem;
+  transition: 300ms;
+  flex: 1;
+}
+
+
+.find-repositories-input:focus {
+  outline: none;
+  box-shadow: 0.2rem 0.8rem 1.6rem #cdcccf;
+}

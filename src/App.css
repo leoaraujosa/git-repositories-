@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -9,12 +10,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .container-infos {
-  border: 2px solid black;
-  padding: 30px;
+  border: 1px solid rgba(161, 110, 110, 0.10);
+  padding: 50px;
   border-radius: 10px;
   margin: 30px 20px;
+  background-color: rgba(0,0,0,0.05)
 }

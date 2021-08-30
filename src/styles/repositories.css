@@ -1,0 +1,11 @@
+.list-repositories {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.button-favorite-repositories {
+  cursor: pointer;
+}
