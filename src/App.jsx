@@ -9,13 +9,14 @@ import "./App.css";
 export default function App() {
   const [repositories, setRepositores] = useState([]);
   const [user, setUser] = useState([]);
+  const [inputData, setInputData] = useState('');
   console.log(user);
 
   //useEffect que aguarda o retorno de um JSON da API com usuários do Git.
 
   useEffect(async () => {
     const responseUser = await fetch(
-      `https://api.github.com/users/leoaraujosa`
+      `https://api.github.com/users/${inputData}`
     );
     const dataUser = await responseUser.json();
 
@@ -26,7 +27,7 @@ export default function App() {
 
   useEffect(async () => {
     const response = await fetch(
-      `https://api.github.com/users/leoaraujosa/repos`
+      `https://api.github.com/users/${inputData}/repos`
     );
     const data = await response.json();
 
@@ -50,6 +51,10 @@ export default function App() {
     setRepositores(newRepositories);
   }
 
+  function handleInputChange(data) {
+    setInputData(data)
+  }
+
   return (
     <>
       <div className="container">
@@ -57,7 +62,9 @@ export default function App() {
           <Header 
             user={user} 
           />
-          <FindRepositories />
+          <FindRepositories
+          handleInputChange={handleInputChange} 
+          />
           <Repositories
             repositories={repositories}
             handleFavorite={handleFavorite}
